@@ -5,18 +5,18 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      trim: true,
-      required: false,
+      // trim: true,
+      // required: false,
       unique: true
     },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true
-    },
-    password: {
+    // email: {
+    //   type: String,
+    //   required: true,
+    //   unique: true,
+    //   lowercase: true,
+    //   trim: true
+    // },
+    encryptedPass: {
       type: String,
       required: true
     }

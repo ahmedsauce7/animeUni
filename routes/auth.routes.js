@@ -2,12 +2,22 @@ const router = require("express").Router();
 const User = require("../models/User.model");
 const bcryptjs = require("bcryptjs");
 const saltRounds = 13;
+const isLoggedIn = require('../middleware/route-guard')
+const isLoggedOut = require('../middleware/route-guard')
 
 /* GET home page */
-
 router.get("/", (req, res, next) => {
   res.render("index");
 });
+
+
+//Log Out
+router.post('/logout', (req, res, next) => {
+  req.session.destroy(error => {
+    if (error) next(error)
+    res.redirect('/')
+  })
+})
 
 // Display signup form
 router.get("/signup", (req, res, next) => {
@@ -23,12 +33,18 @@ router.post("/signup", async (req, res, next) => {
       const encryptedPass = bcryptjs.hashSync(req.body.password, salt);
       const newUser = await User.create({
         username: req.body.username,
+        email: req.body.email,
         encryptedPass,
       });
       res.redirect("/auth/login");
+    } else if (await User.findOne({ username: req.body.username })) {
+      res.render("auth/signup", {
+        errorMessage: "Username already exist",
+        data: { username: req.body.username },
+      });
     } else {
       res.render("auth/signup", {
-        errorMessage: "User already exist",
+        errorMessage: "Email already exist",
         data: { username: req.body.username },
       });
     }

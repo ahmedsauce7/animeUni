@@ -1,6 +1,8 @@
 <h1>Login Page</h1>
 <form method="POST" action="/auth/login">
-  <label> Username: <input type="text" name="username" required /> </label>
+  <label>
+    Username: <input type="text" name="username" required />
+  </label>
   <label>
     Password:
     <input type="password" name="password" type="password" required />
@@ -8,6 +10,8 @@
   <button type="submit">Login</button>
 </form>
 
-<% if (typeof errorMessage !== "undefined" ) { %>
-<p><%= errorMessage %></p>
-<%}%>
+<% if (typeof errorMessage !=="undefined" ) { %>
+  <p>
+    <%= errorMessage %>
+  </p>
+  <%}%>

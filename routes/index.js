@@ -52,7 +52,7 @@ router.get("/nier", isLoggedIn, (req, res, next) => {
   console.log(req.session)
   res.render("nier", {user: req.session.user});
 });
-router.get("/conan", isLoggedIn, (req, res, next) => {
+router.get("/Universum/conan", isLoggedIn, (req, res, next) => {
   console.log(req.session)
   res.render("conan", {user: req.session.user});
 });
@@ -71,6 +71,23 @@ router.get("/onepiece", isLoggedIn, (req, res, next) => {
 router.get("/sevendeadlysins", isLoggedIn, (req, res, next) => {
   console.log(req.session)
   res.render("sevendeadlysins", {user: req.session.user});
+});
+// Information
+router.get("/Info-A", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("Info-A", {user: req.session.user});
+});
+router.get("/Info-B", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("Info-B", {user: req.session.user});
+});
+router.get("/Info-C", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("Info-C", {user: req.session.user});
+});
+router.get("/Info-D", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("Info-D", {user: req.session.user});
 });
 
 module.exports = router;

@@ -10,6 +10,22 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
+
+
+// Information
+router.post('/infos', (req, res, next) => {
+  res.redirect('/Info-A')
+})
+router.post('/infos', (req, res, next) => {
+  res.redirect('/Info-B')
+})
+router.post('/infos', (req, res, next) => {
+  res.redirect('/Info-C')
+})
+router.post('/infos', (req, res, next) => {
+  res.redirect('/Info-D')
+})
+
 // Universe
 router.post('/universe', (req, res, next) => {
   res.redirect('/dragonball')
@@ -20,7 +36,7 @@ router.post('/universe', (req, res, next) => {
 router.post('/universe', (req, res, next) => {
   res.redirect('/nier')
 })
-router.post('/universe', (req, res, next) => {
+router.post('/Universum/universe', (req, res, next) => {
   res.redirect('/conan')
 })
 router.post('/universe', (req, res, next) => {

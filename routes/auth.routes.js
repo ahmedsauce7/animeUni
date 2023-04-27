@@ -72,7 +72,7 @@ router.post('/logout', (req, res, next) => {
     if (error) next(error)
     res.redirect('/')
   })
-})
+});
 
 // Display signup form
 router.get("/signup", (req, res, next) => {

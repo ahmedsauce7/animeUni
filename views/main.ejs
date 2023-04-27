@@ -1,15 +1,15 @@
 <h1>Character</h1>
-<form action="/auth/logout" method="post">
-    <button type="submit">Log out</button>
-  </form>
   <div class="characterCreate">
     <nav>
+      <form action="/auth/logout" method="post">
+        <button type="submit">Log out</button>
+      </form>
     </nav>
     <div class="pageCtr">
       <div class="box">
         <div class="pageText">
           <h1>CREATE YOUR NEW MULTIVERSE CHARACTER!</h1>
-          <form action="/auth/application" method="POST">
+          <form action="/characters/create" method="POST">
             <ul class="wrapper">
               <li class="form-row">
                 <label>Name:</label><input type="text" required name="name" />
@@ -51,8 +51,7 @@
                   <option value="ULTRA INSTINCT">ULTRA INSTINCT</option>
                 </select>
               </li>
-              <li class="form-row">
-                <button type="submit">WELCOME TO THE MULTIVERSE!</button>
+                <button type="submit">WELCOME TO THE MULTIVERSE</button>
               </li>
             </ul>
   

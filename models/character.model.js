@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
 const characterSchema = new Schema(
   {
-    username: {
+    name: {
       type: String,
       required: true,
     },
@@ -29,7 +29,7 @@ const characterSchema = new Schema(
       required: true
     },
     image: {
-        type: string
+        type: String,
     },
     player: {
         type: Schema.Types.ObjectId,
@@ -42,6 +42,6 @@ const characterSchema = new Schema(
   }
 );
 
-const User = model("character", characterSchema);
+const character = model("character", characterSchema);
 
 module.exports = character;

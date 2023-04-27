@@ -13,12 +13,23 @@ router.get("/application", isLoggedIn, (req, res, next) => {
   res.render("application", {user: req.session.user});
 });
 
+<<<<<<< HEAD
 // Navigator
 router.get("/main", isLoggedIn, (req, res, next) => {
   console.log(req.session)
   res.render("main", {user: req.session.user});
 });
 router.get("/private", isLoggedIn, (req, res, next) => {
+=======
+// add is logged in 
+router.get("/main", (req, res, next) => {
+  console.log(req.session)
+  res.render("main", {user: req.session.user});
+});
+
+// add is logged in !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+router.get("/private", (req, res, next) => {
+>>>>>>> 94e8f056288fffb900f2efb367a27d6cb6ad801d
   console.log(req.session)
   res.render("private", {user: req.session.user});
 });

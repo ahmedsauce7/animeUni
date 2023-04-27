@@ -131,8 +131,9 @@ router.post("/login", async (req, res, next) => {
   } catch (error) {
     console.log(error)
     res.render('auth/login', {errorMessage: 'Error occurred. Please try again'})
-  }
-    
+  } 
 });
+
+
 
 module.exports = router;

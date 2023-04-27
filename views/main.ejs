@@ -2,3 +2,67 @@
 <form action="/auth/logout" method="post">
     <button type="submit">Log out</button>
   </form>
+  <div class="characterCreate">
+    <nav>
+    </nav>
+    <div class="pageCtr">
+      <div class="box">
+        <div class="pageText">
+          <h1>CREATE YOUR NEW MULTIVERSE CHARACTER!</h1>
+          <form action="/auth/application" method="POST">
+            <ul class="wrapper">
+              <li class="form-row">
+                <label>Name:</label><input type="text" required name="name" />
+              </li>
+              <li class="form-row">
+                <label>Universe:</label>
+                <select name="universe" required>
+                  <option value="Human">Human</option>
+                  <option value="Sayian">Sayian</option>
+                  <option value="Shinobi">Shinobi</option>
+                  <option value="Demon">Demon</option>
+                  <option value="Ghoul">Ghoul</option>
+                  <option value="Android">Android</option>
+                  <option value="Alian">Alian</option>
+                </select>
+              </li>
+              <li class="form-row">
+                <label>Gender:</label>
+                <select name="gender" required>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </li>
+              <li class="form-row">
+                <label>Nickname:</label>
+                <input type="text" name="nickname" required />
+              </li>
+              <li class="form-row">
+                <label>Weakness:</label>
+                <input type="text" name="weakness" required />
+              </li>
+              <li class="form-row">
+                <label>Weapon of choice:</label>
+                <select name="weapon">
+                  <option value="KAMEHAMEHA">KAMEHAMEHA</option>
+                  <option value="SHARINGAN">SHARINGAN</option>
+                  <option value="FIRE BREATH STYLE">FIRE BREATH STYLE</option>
+                  <option value="BANKAI">BANKAI</option>
+                  <option value="ULTRA INSTINCT">ULTRA INSTINCT</option>
+                </select>
+              </li>
+              <li class="form-row">
+                <button type="submit">WELCOME TO THE MULTIVERSE!</button>
+              </li>
+            </ul>
+  
+            <div class="error">
+              <% if (typeof errorMessage !== "undefined") {%>
+              <p><%= errorMessage%></p>
+              <% } %>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -9,6 +9,33 @@ const isLoggedOut = require('../middleware/route-guard')
 router.get("/", (req, res, next) => {
   res.render("index");
 });
+
+// Universe
+router.post('/universe', (req, res, next) => {
+  res.redirect('/dragonball')
+})
+router.post('/universe', (req, res, next) => {
+  res.redirect('/naruto')
+})
+router.post('/universe', (req, res, next) => {
+  res.redirect('/nier')
+})
+router.post('/universe', (req, res, next) => {
+  res.redirect('/conan')
+})
+router.post('/universe', (req, res, next) => {
+  res.redirect('/demonslayer')
+})
+router.post('/universe', (req, res, next) => {
+  res.redirect('/tokyoghoul')
+})
+router.post('/universe', (req, res, next) => {
+  res.redirect('/onepiece"')
+})
+router.post('/universe', (req, res, next) => {
+  res.redirect('/sevendeadlysins')
+})
+
 // Navigator
 router.post('/application', (req, res, next) => {
     res.redirect('/game')

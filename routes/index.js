@@ -20,7 +20,7 @@ router.get("/main", (req, res, next) => {
 });
 
 // add is logged in !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-router.get("/private", (req, res, next) => {
+router.get("/private", isLoggedIn, (req, res, next) => {
   console.log(req.session)
   res.render("private", {user: req.session.user});
 });

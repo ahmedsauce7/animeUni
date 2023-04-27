@@ -26,6 +26,10 @@ app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`
 const index = require('./routes/index')
 app.use('/', index)
 
+//character routes
+const charRoutes = require('./routes/characters.routes')
+app.use('/characters', charRoutes)
+
 const authRouter = require('./routes/auth.routes')
 const { isLoggedOut } = require('./middleware/route-guard')
 app.use('/auth', isLoggedOut, authRouter)

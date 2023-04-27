@@ -9,7 +9,19 @@ const isLoggedOut = require('../middleware/route-guard')
 router.get("/", (req, res, next) => {
   res.render("index");
 });
-
+// Navigator
+router.post('/application', (req, res, next) => {
+    res.redirect('/game')
+  })
+  router.post('/application', (req, res, next) => {
+    res.redirect('/infos')
+  })
+  router.post('/application', (req, res, next) => {
+    res.redirect('/characterview')
+  })
+  router.post('/application', (req, res, next) => {
+    res.redirect('/universe')
+  })
 
 //Log Out
 router.post('/logout', (req, res, next) => {

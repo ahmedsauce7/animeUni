@@ -25,4 +25,24 @@ router.get("/private", (req, res, next) => {
   res.render("private", {user: req.session.user});
 });
 
+router.get("/game", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("game", {user: req.session.user});
+});
+
+router.get("/infos", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("infos", {user: req.session.user});
+});
+
+router.get("/characterview", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("characterview", {user: req.session.user});
+});
+router.get("/universe", isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  res.render("universe", {user: req.session.user});
+});
+
+
 module.exports = router;

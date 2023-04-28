@@ -27,7 +27,36 @@ res.render('characterDetails', {newCharacter})
         console.log(error)
     }
 })
+// Update, Delete
+router.get("/:id/details", isLoggedIn, async (req, res) => {
+    try {
+      const character = await Character.findById(req.params.id);
+      res.render("characterDetails", { character });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
-
+  router.get("/:id/update", isLoggedIn, async (req, res) => {
+    try {
+      const character = await Character.findById(req.params.id);
+      res.render("characterUpdate", { character });
+    } catch (error) {
+      console.log(error);
+    }
+  });
+  
+  router.post("/:id/update", isLoggedIn, async (req, res) => {
+    try {
+      await Character.findByIdAndUpdate(req.params.id, {
+        name: req.body.name,
+        occupation: req.body.occupation,
+        allegiance: req.body.allegiance,
+      });
+      res.redirect(`/characters/${req.params.id}/details`);
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
 module.exports = router;

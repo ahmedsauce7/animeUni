@@ -1,0 +1,46 @@
+<h1>Update</h1>
+<form action="/auth/logout" method="post">
+    <button type="submit">Log out</button>
+  </form>
+<div class="updateBackground">
+    <div class="pageCtr">
+    <div class="box">
+      <div class="pageText">
+        <h1>Change your character's name, occupation and allegiance below:</h1>
+        <form action="/characters/<%= character.id %>/update" method="POST">
+          <ul class="wrapper">
+            <li class="form-row">
+              <label>Name:</label>
+              <input type="text" name="name" value="<%= character.name %>" />
+            </li>
+            <li class="form-row">
+              <label>Occupation:</label>
+              <input
+                type="text"
+                name="occupation"
+                value="<%= character.occupation %>"
+              />
+            </li>
+            <li class="form-row">
+              <label>Allegiance:</label>
+              <input
+                type="text"
+                name="allegiance"
+                value="<%= character.allegiance %>"
+              />
+            </li>
+            <li class="form-row">
+              <button type="submit">Apply Changes!</button>
+            </li>
+            <li class="form-row">
+              <a href="/characters/<%= character.id%>/details" class="whiteButton"
+                >Cancel</a
+              >
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+  

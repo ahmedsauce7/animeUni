@@ -11,6 +11,11 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     const user = req.session.player;
     const currentChar = await character.find({player: user})
     res.render('characterDetails', {currentChar})
+router.get('/', isLoggedIn, async (req, res, next) => {
+  try { 
+    const user = req.session.player;
+    const currentChar = await character.find({player: user})
+    res.render('characterDetails', {currentChar})
   } catch (error) {
     console.log(error)
   }

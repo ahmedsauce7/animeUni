@@ -10,6 +10,54 @@ router.get('/', (req, res, next) => {
     res.render('characterDetails')
 });
 
+router.post("/create", isLoggedIn, async (req, res) => {
+  try {
+    let imgUrl;
+    if (req.body.universe === "Human" && req.body.gender === "Male") {
+      imgUrl = "/images/male_human.png";
+    } else if (req.body.universe === "Human" && req.body.gender === "Female") {
+      imgUrl = "/images/female_human.png";
+    } else if (req.body.universe === "Sayian" && req.body.gender === "Male") {
+      imgUrl = "/images/male_dwarf.png";
+    } else if (req.body.universe === "Sayian" && req.body.gender === "Female") {
+      imgUrl = "/images/female_dwarf.png";
+    } else if (req.body.universe === "Shinobi" && req.body.gender === "Male") {
+      imgUrl = "/images/male_elf.png";
+    } else if (req.body.universe === "Shinobi" && req.body.gender === "Female") {
+      imgUrl = "/images/female_elf.png";
+    } else if (req.body.universe === "Demon" && req.body.gender === "Male") {
+      imgUrl = "/images/male_orc.png";
+    } else if (req.body.universe === "Demon" && req.body.gender === "Female") {
+      imgUrl = "/images/female_orc.png";
+    } else if (req.body.universe === "Ghoul" && req.body.gender === "Male") {
+      imgUrl = "/images/male_wizard.png";
+    } else if (req.body.universe === "Ghoul" && req.body.gender === "Female") {
+      imgUrl = "/images/female_wizard.png";
+    } else if (req.body.universe === "Android" && req.body.gender === "Male") {
+      imgUrl = "/images/male_hobbit.png";
+    } else if (req.body.universe === "Android" && req.body.gender === "Female") {
+      imgUrl = "/images/female_hobbit.png";
+    } else if (req.body.universe === "Alien" && req.body.gender === "Male") {
+      imgUrl = "/images/male_hobbit.png";
+    } else if (req.body.universe === "Alien" && req.body.gender === "Female") {
+      imgUrl = "/images/female_hobbit.png";
+    }
+    const created = await Character.create({
+      name: req.body.name,
+      species: req.body.species,
+      gender: req.body.gender,
+      occupation: req.body.occupation,
+      allegiance: req.body.allegiance,
+      weapons: req.body.weapons,
+      image: imgUrl,
+      owner: req.session.user,
+    });
+    res.redirect(`/characters/${created.id}/details`);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 router.post('/create', async (req, res, next) => {
     try { 
         const characters = await character.create(req.body)

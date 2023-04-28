@@ -72,7 +72,7 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
 
   router.get("/:id/update", isLoggedIn, async (req, res) => {
     try {
-      const character = await character.findById(req.params.id);
+      const findChar = await character.findById(req.params.id);
       res.render("characterUpdate", { character });
     } catch (error) {
       console.log(error);

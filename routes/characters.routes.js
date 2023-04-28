@@ -27,7 +27,7 @@ res.render('characterDetails', {newCharacter})
         console.log(error)
     }
 })
-// Update, Delete
+// 1. Update, -> Delete
 router.get("/:id/details", isLoggedIn, async (req, res) => {
     try {
       const character = await Character.findById(req.params.id);
@@ -45,18 +45,34 @@ router.get("/:id/details", isLoggedIn, async (req, res) => {
       console.log(error);
     }
   });
-  
+
   router.post("/:id/update", isLoggedIn, async (req, res) => {
     try {
       await Character.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
-        occupation: req.body.occupation,
-        allegiance: req.body.allegiance,
+        weapon: req.body.weapon,
+        universe: req.body.universe,
       });
       res.redirect(`/characters/${req.params.id}/details`);
     } catch (error) {
       console.log(error);
     }
+  });
+// 2. Delete
+router.get("/:id/delete", isLoggedIn, async (req, res) => {
+    try {
+      const toDelete = await Character.findById(req.params.id);
+      res.render("/characterDelete", { toDelete });
+    } catch (error) {
+      console.log(error);
+    }
+  });
+  
+  router.get("/:id/deleteValid", isLoggedIn, async (req, res) => {
+    try {
+      await Character.findByIdAndDelete(req.params.id);
+      res.redirect("/characters");
+    } catch (error) {}
   });
 
 module.exports = router;

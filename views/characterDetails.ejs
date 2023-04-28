@@ -3,14 +3,15 @@
   <button type="submit">Log out</button>
 </form>
 
-    <h1><%= character.name %> Details:</h2>  
-        <p>
-          <%= character.gender %> <%= character.nickname %> <%=
-          character.weakness %>
-        </p>
-        <p>Universe: <%= character.universe %></p>
-        <p>Weapon: <%= character.weapons %></p>
-        <a href="/characters/<%= character.id %>/update"
-          class="whiteButton">Change Your Character</a>  
-        <a href="/characters/<%= character.id %>/delete" class="whiteButton">Delete this character</a>
+
+<h1><%= findChar.name %> Details:</h2>  
+  <p>
+    <%= findChar.gender %> <%= findChar.nickname %> <%= findChar.weakness %>
+  </p>
+  <p>Universe: <%= findChar.universe %></p>
+  <p>Weapon: <%= findChar.weapon %></p>
+  <a href="/characters/<%= findChar.id %>/update"
+    class="whiteButton">Change Your Character</a>  
+  <a href="/characters/<%= findChar.id %>/delete" class="whiteButton">Delete this character</a>
+
   

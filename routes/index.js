@@ -19,9 +19,9 @@ router.get("/main", isLoggedIn, (req, res, next) => {
   res.render("main", {user: req.session.user});
 });
 
-router.get("/private", isLoggedIn, (req, res, next) => {
+router.get("/items", isLoggedIn, (req, res, next) => {
   console.log(req.session)
-  res.render("private", {user: req.session.user});
+  res.render("items", {user: req.session.user});
 });
 router.get("/game", isLoggedIn, (req, res, next) => {
   console.log(req.session)

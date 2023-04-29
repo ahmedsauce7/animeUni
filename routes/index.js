@@ -29,22 +29,21 @@ router.get("/infos", isLoggedIn, (req, res, next) => {
 router.get("/characterview", isLoggedIn, (req, res, next) => {
   res.render("characterview", {user: req.session.user});
 });
+router.get("/characters", isLoggedIn, (req, res, next) => {
+  res.render("characters", {user: req.session.user});
+});
 router.get("/universe", isLoggedIn, (req, res, next) => {
-
   res.render("universe", {user: req.session.user});
 });
 
 // Universe
 router.get("/dragonball", isLoggedIn, (req, res, next) => {
-
   res.render("dragonball", {user: req.session.user});
 });
 router.get("/naruto", isLoggedIn, (req, res, next) => {
- 
   res.render("naruto", {user: req.session.user});
 });
 router.get("/nier", isLoggedIn, (req, res, next) => {
-
   res.render("nier", {user: req.session.user});
 });
 router.get("/Universum/conan", isLoggedIn, (req, res, next) => {
@@ -60,16 +59,13 @@ router.get("/onepiece", isLoggedIn, (req, res, next) => {
   res.render("onepiece", {user: req.session.user});
 });
 router.get("/sevendeadlysins", isLoggedIn, (req, res, next) => {
-
   res.render("sevendeadlysins", {user: req.session.user});
 });
 // Information
 router.get("/Info-A", isLoggedIn, (req, res, next) => {
-
   res.render("Info-A", {user: req.session.user});
 });
 router.get("/Info-B", isLoggedIn, (req, res, next) => {
- 
   res.render("Info-B", {user: req.session.user});
 });
 router.get("/Info-C", isLoggedIn, (req, res, next) => {

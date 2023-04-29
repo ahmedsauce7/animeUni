@@ -14,20 +14,26 @@
               <input type="text" name="name" value="<%= character.name %>" />
             </li>
             <li class="form-row">
-              <label>Weapon:</label>
-              <input
-                type="text"
-                name="occupation"
-                value="<%= character.weapon %>"
-              />
+              <label>Weapon of choice:</label>
+                <select name="weapon">
+                  <option value="KAMEHAMEHA">KAMEHAMEHA</option>
+                  <option value="SHARINGAN">SHARINGAN</option>
+                  <option value="FIRE BREATH STYLE">FIRE BREATH STYLE</option>
+                  <option value="BANKAI">BANKAI</option>
+                  <option value="ULTRA INSTINCT">ULTRA INSTINCT</option>
+                </select>
             </li>
             <li class="form-row">
               <label>Universe:</label>
-              <input
-                type="text"
-                name="universe"
-                value="<%= character.universe %>"
-              />
+                <select name="universe" required>
+                  <option value="Human">Human</option>
+                  <option value="Sayian">Sayian</option>
+                  <option value="Shinobi">Shinobi</option>
+                  <option value="Demon">Demon</option>
+                  <option value="Ghoul">Ghoul</option>
+                  <option value="Android">Android</option>
+                  <option value="Alien">Alian</option>
+                </select>
             </li>
             <li class="form-row">
               <button type="submit">Apply Changes!</button>
@@ -43,4 +49,5 @@
     </div>
     </div>
   </div>
+  
   

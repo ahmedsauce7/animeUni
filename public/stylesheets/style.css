@@ -1,6 +1,10 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/wallpaper.jpg");
+  background-position: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -10,3 +14,126 @@ a {
 h1 {
   color: 15px;
 }
+
+.indexText{
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 30px;
+
+}
+/* welcome page css */
+.welcomePage {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  text-align: center;
+}
+
+.signBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+.logBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+}
+
+.welcomeBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sign up page css */
+.signupPage{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+ font-size: 10px;
+
+}
+
+.signText {
+  color: white;
+}
+
+.signingupBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: skyblue;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin: 30px;
+}
+
+.form-control{
+  width: 200px;
+  height: 30px;
+}
+
+/*login page css*/
+.loginText {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.loginPage{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  height: 400px;
+  font-size: 20px;
+}
+
+.loginInputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+

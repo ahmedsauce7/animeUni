@@ -1,8 +1,9 @@
-<h1>Signup Page</h1>
+<div class="signupPage">
+<h1 class="signText">Signup Page</h1>
 <form method="POST" action="/auth/signup">
   <label>
-    UserName: <input type="text" name="username" required value="<% if (typeof
-    errorMessage !== 'undefined') { %><%= data.username %><% } %>"" />
+UserName: <input type="text" name="username" required value="<%if(typeof errorMessage!=='undefined'){%>
+<%= data.username%><%}%>"/> 
   </label>
   <label>
     Password:
@@ -10,10 +11,11 @@
   </label>
   <label>
     Email:
-    <input type="email" name="email" required />
+    <input type="email" name="email" required /> 
   </label>
-  <button type="submit">SignUp</button>
+  <button class="signingupBtn" type="submit">SignUp</button>
 </form>
 <% if (typeof errorMessage !== "undefined" ) { %>
 <p><%= errorMessage %></p>
 <%}%>
+</div>

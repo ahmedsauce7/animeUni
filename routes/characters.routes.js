@@ -11,11 +11,6 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     const user = req.session.player;
     const currentChar = await character.find({player: user})
     res.render('characterDetails', {currentChar})
-router.get('/', isLoggedIn, async (req, res, next) => {
-  try { 
-    const user = req.session.player;
-    const currentChar = await character.find({player: user})
-    res.render('characterDetails', {currentChar})
   } catch (error) {
     console.log(error)
   }
@@ -41,7 +36,6 @@ res.render('characterDetails', {newCharacter})
     }
 })
 
-//route post for after character dont forget to add all the other pictures
 router.post("/create", isLoggedIn, async (req, res) => {
   try {
     let charImg;
@@ -79,7 +73,7 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
   router.get("/:id/update", isLoggedIn, async (req, res) => {
     try {
       const findChar = await character.findById(req.params.id);
-      res.render("characterUpdate", { findChar });
+      res.render("characterUpdate", { character });
     } catch (error) {
       console.log(error);
     }

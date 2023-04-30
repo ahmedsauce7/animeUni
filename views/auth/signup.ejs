@@ -1,17 +1,17 @@
 <div class="signupPage">
 <h1 class="signText">Signup Page</h1>
 <form method="POST" action="/auth/signup">
-  <label>
-UserName: <input type="text" name="username" required value="<%if(typeof errorMessage!=='undefined'){%>
-<%= data.username%><%}%>"/> 
+  <label >
+Username: <input type="text" name="username" required value="<%if(typeof errorMessage!=='undefined'){%>
+<%= data.username%><%}%>" class="signupForm"/> 
   </label>
-  <label>
+  <label >
     Password:
-    <input type="password" name="password" type="password" required />
+    <input type="password" name="password" type="password" required class="signupForm"/>
   </label>
-  <label>
+  <label >
     Email:
-    <input type="email" name="email" required /> 
+    <input type="email" name="email" required class="signupForm"/> 
   </label>
   <button class="signingupBtn" type="submit">SignUp</button>
 </form>

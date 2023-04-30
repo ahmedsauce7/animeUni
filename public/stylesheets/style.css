@@ -74,17 +74,19 @@ p {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
+  height: 500px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
- font-size: 10px;
 
 }
 
 .signText {
   color: white;
+  text-align: center;
+  margin-top: 0;
 }
 
 .signingupBtn {
@@ -97,18 +99,20 @@ p {
   border: none;
   border-radius: 5px;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 180px;
   cursor: pointer;
 }
 
-.form-group {
-  margin: 30px;
+.signupForm {
+  width: 400px;
+  height: 30px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-control{
-  width: 200px;
-  height: 30px;
-}
 
 /*login page css*/
 .loginText {
@@ -134,6 +138,31 @@ p {
   align-items: center;
   text-align: center;
 }
+/* home page css */
+.HomePage{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  height: 400px;
+  text-align: center;
+}
 
+/*universe page css*/
+.universePage{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  height: 400px;
+  text-align: center;
+}
 
+/* dragon ball universe page css*/
+.exploreBox{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  height: 500px;
+  text-align: center;
+  color: white;
+}
 
+.locationImage{
+  width: 400px;
+}

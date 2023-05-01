@@ -21,13 +21,13 @@ module.exports = app => {
         sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
         secure: process.env.NODE_ENV === 'production',
         httpOnly: true,
-        maxAge: 30000, // 30 * 1000 ms === 30 secs
+        maxAge: 300000000, // 30 * 1000 ms === 30 secs
       },
       store: MongoStore.create({
         mongoUrl: process.env.MONGODB_URI || "mongodb://127.0.0.1/animeUni",
 
         // ttl => time to live
-        // ttl: 60 * 60 * 24 // 60sec * 60min * 24h => 1 day
+        ttl: 60 * 60 * 24 // 60sec * 60min * 24h => 1 day
       }),
     })
   )

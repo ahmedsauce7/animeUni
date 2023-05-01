@@ -1,5 +1,6 @@
 const { isLoggedIn } = require("../middleware/route-guard");
 const User = require("../models/User.model");
+const uploader = require('../middleware/cloudinary.config.js');
 
 const router = require("express").Router();
 
@@ -28,9 +29,6 @@ router.get("/infos", isLoggedIn, (req, res, next) => {
 });
 router.get("/characterview", isLoggedIn, (req, res, next) => {
   res.render("characterview", {user: req.session.user});
-});
-router.get("/characters", isLoggedIn, (req, res, next) => {
-  res.render("characters", {user: req.session.user});
 });
 router.get("/universe", isLoggedIn, (req, res, next) => {
   res.render("universe", {user: req.session.user});

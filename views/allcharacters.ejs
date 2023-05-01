@@ -1,7 +1,9 @@
-<h1>Character Details:</h1>
+<h1>Your Characters</h1>
 <form action="/auth/logout" method="post">
   <button type="submit">Log out</button>
 </form>
+<% allcharacters.forEach(findChar => { %>
+ 
 <div class="exploreBox"> 
 <h1><%= findChar.name %> Details:</h2>  
   <p>
@@ -15,5 +17,6 @@
 
   <a href="/application"> home</a>
   </div>
-
-  
+  <% }) %>
+   
+<a href="/main">New Character</a>

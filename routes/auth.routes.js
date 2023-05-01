@@ -36,7 +36,7 @@ router.post('/universe', (req, res, next) => {
 router.post('/universe', (req, res, next) => {
   res.redirect('/nier')
 })
-router.post('/Universum/universe', (req, res, next) => {
+router.post('/universe', (req, res, next) => {
   res.redirect('/conan')
 })
 router.post('/universe', (req, res, next) => {

@@ -9,16 +9,17 @@
       <img
         src="/images/uniImages/tokyoghouluni.jpg"
         alt="Mount Doom"
-        class="tokyogImage"
+        class="locationImage"
       />
-      <button id="play">Play Music</button>
+      <audio
+        src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093128/mount_doom_tiv9ri.mp3"
+        controls="true"
+        loop
+        class="audio"
+      ></audio>
       <script>
-        let play = document.getElementById("play");
-        function playMusic(){
-          let audio = new Audio("/audio/wegottapower.mp3");
-          audio.play()
-        }
-        play.addEventListener("click", playMusic);
+        const audio = document.querySelector(".audio");
+        audio.volume = 0.05;
       </script>
     </div>
     <div class="about">

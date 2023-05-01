@@ -33,7 +33,6 @@ router.get("/characters", isLoggedIn, (req, res, next) => {
   res.render("characters", {user: req.session.user});
 });
 router.get("/universe", isLoggedIn, (req, res, next) => {
-
   res.render("universe", {user: req.session.user});
 });
 

@@ -42,6 +42,6 @@ const characterSchema = new Schema(
   }
 );
 
-const character = model("character", characterSchema);
+const Character = model("Character", characterSchema);
 
-module.exports = character;
+module.exports = Character;

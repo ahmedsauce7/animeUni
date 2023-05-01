@@ -2,3 +2,63 @@
 <form action="/auth/logout" method="post">
     <button type="submit">Log out</button>
   </form>
+  <html>
+    <head>
+      <title>Dice Game</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <div class="row" align ="center">
+        <div class="col-4">
+     <h3>you Dice</h3>
+    <img src="images/d1.png" alt="roll:1" id="mydice1"/>
+    <img src="images/d1.png" alt="roll:1" id="mydice2"/>
+        </div>
+        <div>class="col-4">
+          <h3>Enemy's Dice</h3>
+          <img src="images/e1.png" alt="roll:1"id="hisdice1" />
+          <img src="images/e1.png" alt="roll:1"id="hisdice2"/>
+        </div>
+      <div class= "col-4">
+<img src = "images/good-luck.gif" id="message" alt="Good Luck!">
+<button class="greenBut" onclick="throwdice()" >Play </button>
+    </div>
+      </div>
+      <script type="text/javascript">
+        function throwdice(){
+          let rand1=math.round(math.random()*5) +1;
+          let rand2=math.round(math.random()*5) +1;
+          let rand3=math.round(math.random()*5) +1;
+          let rand4=math.round(math.random()*5) +1;
+
+          document.getElementById("mydice1").src="images/d" + rand1 + ".png;"
+          document.getElementById("mydice2").src="images/d" + rand2 + ".png;"
+          document.getElementById("hisdice1").src="images/e" + rand3 + ".png;"
+          document.getElementById("hisdice2").src="images/e" + rand4 + ".png;"
+          let side_alt =["roll:1","roll:2","roll:3","roll:4","roll:5","roll:6"]
+          document.getElementById('mydice1').alt=side_alt[rand1-1];
+          document.getElementById('mydice2').alt=side_alt[rand2-1];
+          document.getElementById('hisdice1').alt=side_alt[rand3-1];
+          document.getElementById('hisdice2').alt=side_alt[rand4-1];
+        }
+          who_won(rand1,rand2,rand3,rand4);
+
+        function who_won (rand1,rand2,rand3,rand4){
+          let player_points = rand1+rand2;
+          let enemy_points= rand3+rand4;
+          let giffy = winner(player_points,enemy_points);
+          document.getElementById("message").src ="images/"+ giffy;
+          document.getElementById("message").alt = giffy;
+        }
+        function winner(player, enemey){
+          if (player<enemy){
+            return "looser.gif";
+          } if(enemy<player){
+            return "picture.win.gif"
+          }
+          if(player==enemy){
+          }
+        }
+      </script>
+    </body>
+  </html>

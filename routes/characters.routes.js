@@ -85,7 +85,7 @@ router.post("/create", isLoggedIn, async (req, res) => {
 
 router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
     try {
-        const findChar = await Character.findById(req.params.id);
+        const findChar = await character.findById(req.params.id);
         res.render("characterDetails",{findChar});
     } catch (error) {
         console.log(error);
@@ -94,8 +94,8 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
 
   router.get("/:id/update", isLoggedIn, async (req, res) => {
     try {
-      const findChar = await Character.findById(req.params.id);
-      res.render("characterUpdate", { findChar });
+      const findChar = await character.findById(req.params.id);
+      res.render("characterUpdate", { character });
     } catch (error) {
       console.log(error);
     }
@@ -116,7 +116,7 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
 // 2. Delete
 router.get("/:id/delete", isLoggedIn, async (req, res) => {
     try {
-      const toDelete = await Character.findById(req.params.id);
+      const toDelete = await character.findById(req.params.id);
       res.render("characterDelete", { toDelete });
     } catch (error) {
       console.log(error);

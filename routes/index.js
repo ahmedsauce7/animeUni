@@ -50,7 +50,7 @@ router.get("/nier", isLoggedIn, (req, res, next) => {
 
   res.render("nier", {user: req.session.user});
 });
-router.get("/Universum/conan", isLoggedIn, (req, res, next) => {
+router.get("/conan", isLoggedIn, (req, res, next) => {
   res.render("conan", {user: req.session.user});
 });
 router.get("/demonslayer", isLoggedIn, (req, res, next) => {

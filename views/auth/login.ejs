@@ -1,13 +1,14 @@
-<h1>Login Page</h1>
+<div class="signupPage">
+  <h1>Login Page</h1>
 <form method="POST" action="/auth/login">
   <label>
-    Username: <input type="text" name="username" required />
+    Username: <input type="text" name="username" required class="signupForm"/>
   </label>
   <label>
     Password:
-    <input type="password" name="password" type="password" required />
+    <input type="password" name="password" type="password" required class="signupForm"/>
   </label>
-  <button type="submit">Login</button>
+  <button type="submit" class="logBtn">Login</button>
 </form>
 
 <% if (typeof errorMessage !=="undefined" ) { %>
@@ -15,3 +16,4 @@
     <%= errorMessage %>
   </p>
   <%}%>
+</div>

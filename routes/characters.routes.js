@@ -4,12 +4,12 @@ const bcryptjs = require("bcryptjs");
 const saltRounds = 13;
 const {isLoggedIn} = require('../middleware/route-guard')
 const {isLoggedOut} = require('../middleware/route-guard')
-const character = require("../models/character.model");
+const Character = require("../models/character.model");
 
 router.get('/', isLoggedIn, async (req, res, next) => {
   try { 
     const user = req.session.player;
-    const currentChar = await character.find({player: user})
+    const currentChar = await Character.find({player: user})
     res.render('characterDetails', {currentChar})
   } catch (error) {
     console.log(error)
@@ -28,7 +28,7 @@ router.get('/', isLoggedIn, async (req, res, next) => {
 
 router.get ('/:id/', isLoggedIn, async (req, res, next) => {
     try {
-const newCharacter = await character.findOne({ id: req.params.id })
+const newCharacter = await Character.findOne({ id: req.params.id })
 console.log(newCharacter)
 res.render('characterDetails', {newCharacter})
     } catch (error) {
@@ -43,7 +43,7 @@ router.post("/create", isLoggedIn, async (req, res) => {
       charImg = "/images/charImages/HumanM4.webp";
     } else { (req.body.universe === "Human" && req.body.gender === "Female") 
       charImg = "/images/charImages/HumanF.png";}
-      const charCreation = await character.create({
+      const charCreation = await Character.create({
       name: req.body.name,
       universe: req.body.universe,
       gender: req.body.gender,
@@ -63,7 +63,7 @@ router.post("/create", isLoggedIn, async (req, res) => {
 
 router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
     try {
-        const findChar = await character.findById(req.params.id);
+        const findChar = await Character.findById(req.params.id);
         res.render("characterDetails",{findChar});
     } catch (error) {
         console.log(error);
@@ -72,8 +72,8 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
 
   router.get("/:id/update", isLoggedIn, async (req, res) => {
     try {
-      const findChar = await character.findById(req.params.id);
-      res.render("characterUpdate", { character });
+      const findChar = await Character.findById(req.params.id);
+      res.render("characterUpdate", { findChar });
     } catch (error) {
       console.log(error);
     }
@@ -81,11 +81,12 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
 
   router.post("/:id/update", isLoggedIn, async (req, res) => {
     try {
-      await character.findByIdAndUpdate(req.params.id, {
+      const updatedId = await Character.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
         weapon: req.body.weapon,
         universe: req.body.universe,
-      });
+      }, {new:true});
+      console.log('id:', req.params.id);
       res.redirect(`/characters/${req.params.id}/details`);
     } catch (error) {
       console.log(error);
@@ -94,7 +95,7 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
 // 2. Delete
 router.get("/:id/delete", isLoggedIn, async (req, res) => {
     try {
-      const toDelete = await character.findById(req.params.id);
+      const toDelete = await Character.findById(req.params.id);
       res.render("characterDelete", { toDelete });
     } catch (error) {
       console.log(error);
@@ -103,7 +104,7 @@ router.get("/:id/delete", isLoggedIn, async (req, res) => {
   
   router.get("/:id/deleteValid", isLoggedIn, async (req, res) => {
     try {
-      await character.findByIdAndDelete(req.params.id);
+      await Character.findByIdAndDelete(req.params.id);
       res.redirect("/characters");
     } catch (error) {
         console.log(error);

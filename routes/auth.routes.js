@@ -65,6 +65,9 @@ router.post('/application', (req, res, next) => {
   router.post('/application', (req, res, next) => {
     res.redirect('/universe')
   })
+  router.post('/application', (req, res, next) => {
+    res.redirect('/items')
+  })
 
 //Log Out
 router.post('/logout', (req, res, next) => {

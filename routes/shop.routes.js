@@ -5,3 +5,7 @@ const saltRounds = 13;
 const {isLoggedIn} = require('../middleware/route-guard')
 const {isLoggedOut} = require('../middleware/route-guard')
 const uploader = require('../middleware/cloudinary.config.js');
+const Character = require("../models/character.model");
+
+  
+  module.exports = router;

@@ -20,18 +20,6 @@ router.get('/allcharacters', isLoggedIn, async (req, res, next) => {
 });
 
 
-
-
-
-// router.post('/create', async (req, res, next) => {
-//     try { 
-//         const characters = await character.create(req.body)
-//         res.redirect(`/characters/${characters.id}`)
-//     } catch(error) {
-//         console.log (error)
-//     }
-// })
-
 router.get ('/:id/', isLoggedIn, async (req, res, next) => {
   try {
 const newCharacter = await Character.findOne({ id: req.params.id })
@@ -46,14 +34,14 @@ router.post("/create", isLoggedIn, async (req, res) => {
   try {
     let charImg;
     if (req.body.universe === "Human" && req.body.gender === "Male") {
-      charImg = "/images/charImages/Human4.png";
+      charImg = "/images/charImages/HumanM4.png";
     } else if (req.body.universe === "Human" && req.body.gender === "Female") {
       charImg = "/images/charImages/HumanF.png";
     } else if (req.body.universe === "Saiyan" && req.body.gender === "Male") {
       charImg = "../images/charImages/SaiyanM.jpg";
     } else if (req.body.universe === "Saiyan" && req.body.gender === "Female") {
       charImg = "/images/charImages/SaiyanF.png";
-    } else if (req.body.universe === "Shinobi" && req.body.gender === "Male") {
+    } else if (req.body.universe === "ShinobiM" && req.body.gender === "Male") {
       charImg = "/images/charImages/ShinobiM.png";
     } else if (req.body.universe === "Shinobi" && req.body.gender === "Female") {
       charImg = "/images/charImages/Shinobif.png";
@@ -144,7 +132,5 @@ router.get("/:id/delete", isLoggedIn, async (req, res) => {
     }
   });
 
-
-  // any comment
 
 module.exports = router; 

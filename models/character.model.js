@@ -34,6 +34,25 @@ const characterSchema = new Schema(
     player: {
         type: Schema.Types.ObjectId,
         ref: "User"
+    },
+    shop: {
+      type: [
+        {
+          name: {
+            type: String,
+            required: true,
+          },
+          quantity: {
+            type: Number,
+            required: true,
+            default: 1,
+          },
+        },
+      ],
+      validate: [
+        (items) => items.length <= 4,
+        "Shop can only have a maximum of 3 items"
+      ]
     }
   },
   {

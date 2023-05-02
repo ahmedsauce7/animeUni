@@ -167,6 +167,11 @@ p {
   width: 400px;
 }
 
+.charimg {
+  width: 200px;
+}
+
+
 .gamePage body {
   background-color: darkblue;
   color: yellow;

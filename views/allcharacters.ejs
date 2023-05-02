@@ -1,11 +1,14 @@
-<h1>Your Characters commiting</h1>
+<h1 style="color: white">Your Characters</h1>
 <form action="/auth/logout" method="post">
   <button type="submit">Log out</button>
+  <a href="/main">New Character</a>
+<a href="/application"> home</a>
 </form>
 <% allcharacters.forEach(findChar => { %>
  
 <div class="exploreBox"> 
 <h1><%= findChar.name %> Details:</h2>  
+  <img class="charimg" src="<%= findChar.image %>" alt="character image">
   <p>
     <%= findChar.gender %> <%= findChar.nickname %> <%= findChar.weakness %>
   </p>
@@ -14,9 +17,6 @@
   <a href="/characters/<%= findChar.id %>/update"
     class="whiteButton">Change Your Character</a>  
   <a href="/characters/<%= findChar.id %>/delete" class="whiteButton">Delete this character</a>
-
-  <a href="/application"> home</a>
   </div>
   <% }) %>
    
-<a href="/main">New Character</a>

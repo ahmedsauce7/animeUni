@@ -8,4 +8,12 @@ const uploader = require('../middleware/cloudinary.config.js');
 const Character = require("../models/character.model");
 
   
-  module.exports = router;
+  router.get("/items", isLoggedIn, async (req, res) => {
+    try {
+      const currentUser = req.session.user;
+      const shopItems = await Shop.find();
+      res.render("items", { shopItems, currentUser });
+    } catch (error) {
+      console.log(error);
+    }
+  });

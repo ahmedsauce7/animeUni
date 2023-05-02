@@ -4,6 +4,7 @@ const bcryptjs = require("bcryptjs");
 const saltRounds = 13;
 const {isLoggedIn} = require('../middleware/route-guard')
 const {isLoggedOut} = require('../middleware/route-guard')
+<<<<<<< HEAD
 
 function logChanges(req) {
     if (req.session.user) {
@@ -27,3 +28,8 @@ function logChanges(req) {
       console.log(error);
     }
   });
+=======
+const uploader = require('../middleware/cloudinary.config.js');
+
+test comment
+>>>>>>> 27827db (test)

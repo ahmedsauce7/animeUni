@@ -4,32 +4,5 @@ const bcryptjs = require("bcryptjs");
 const saltRounds = 13;
 const {isLoggedIn} = require('../middleware/route-guard')
 const {isLoggedOut} = require('../middleware/route-guard')
-<<<<<<< HEAD
-
-function logChanges(req) {
-    if (req.session.user) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  
-  router.get("/", isLoggedIn, (req, res) => {
-    const user = req.session.user;
-    res.render("items", { user });
-  });
-  
-  router.get("/items", isLoggedIn, async (req, res) => {
-    try {
-      const currentUser = req.session.user;
-      const shopItems = await Shop.find();
-      res.render("items", { shopItems, currentUser });
-    } catch (error) {
-      console.log(error);
-    }
-  });
-=======
 const uploader = require('../middleware/cloudinary.config.js');
 
-test comment
->>>>>>> 27827db (test)

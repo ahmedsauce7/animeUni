@@ -1,31 +1,27 @@
-<h1>Items</h>
-    <form action="/auth/logout" method="post">
-        <button type="submit">Log out</button>
-      </form>
-
-      <h1>Welcome to the Shop</h1>
-<div class="shopBox">
-    <h1>Welcome to the Universe Shop</h1>
-
-    <p>
-      Welcome, weary fighter. Please, take a look around my little shop.
-      If you need me, I will be in the back...
-    </p>
-
-    <% if (typeof errorMessage !== 'undefined') { %>
-    <p style="font-weight: bold; color: yellow"><%= errorMessage %></p>
-    <% } %>
-
-    <div class="shopItems">
-      <% shopItems.forEach((item) => { %>
-      <div class="shopItem">
-        <p><%= item.name %></p>
-        <p><%= item.price %> Castar</p>
-        <div class="shopItemBackground"><img src="<%= item.image %>" /></div>
-        <form method="POST" action="/profile/shop/<%=item._id%>">
-          <button type="submit">Purchase</button>
-        </form>
-      </div>
-      <% }) %>
-    </div>
-  </div>
+<h1>Items Shop</h1>
+<ul>
+  <li>
+    <h3>Item 1</h3>
+    <p>Description of item 1</p>
+    <form action="/add-item" method="POST">
+      <input type="hidden" name="itemName" value="Item 1">
+      <button>Add to Shop</button>
+    </form>
+  </li>
+  <li>
+    <h3>Item 2</h3>
+    <p>Description of item 2</p>
+    <form action="/add-item" method="POST">
+      <input type="hidden" name="itemName" value="Item 2">
+      <button>Add to Shop</button>
+    </form>
+  </li>
+  <li>
+    <h3>Item 3</h3>
+    <p>Description of item 3</p>
+    <form action="/add-item" method="POST">
+      <input type="hidden" name="itemName" value="Item 3">
+      <button>Add to Shop</button>
+    </form>
+  </li>
+</ul>

@@ -13,15 +13,14 @@
               alt="Mount Doom"
               class="locationImage"
             />
-            <audio
-              src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093128/mount_doom_tiv9ri.mp3"
-              controls="true"
-              loop
-              class="audio"
-            ></audio>
+            <button id="play">Play Music</button>
             <script>
-              const audio = document.querySelector(".audio");
-              audio.volume = 0.05;
+              let play = document.getElementById("play");
+              function playMusic(){
+                let audio = new Audio("/audio/wegottapower.mp3");
+                audio.play()
+              }
+              play.addEventListener("click", playMusic);
             </script>
           </div>
       

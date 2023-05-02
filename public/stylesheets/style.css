@@ -536,6 +536,11 @@ width: 150px;
 >>>>>>> main
 
 
+.charimg {
+  width: 200px;
+}
+
+
 .gamePage body {
   background-color: darkblue;
   color: yellow;

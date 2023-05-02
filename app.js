@@ -42,6 +42,12 @@ app.post('/add-item', (req, res) => {
     res.render('item-details', { name, quantity });
   });
 
+//shop routes
+app.post('/add-item', (req, res) => {
+    const { name, quantity } = req.body;
+    res.render('item-details', { name, quantity });
+  });
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app)
 

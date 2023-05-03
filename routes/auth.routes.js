@@ -73,7 +73,10 @@ router.post('/application', (req, res, next) => {
 //Log Out
 router.post('/logout', (req, res, next) => {
   req.session.destroy(error => {
-    if (error) next(error)
+    if (error) { 
+      console.log(error);
+      next(error);
+    }
     res.redirect('/')
   })
 });

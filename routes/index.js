@@ -79,4 +79,34 @@ router.get("/Info-D", isLoggedIn, (req, res, next) => {
   res.render("Info-D", {user: req.session.user});
 });
 
+// Character View
+router.get("/songoku", isLoggedIn, (req, res, next) => {
+
+  res.render("songoku", {user: req.session.user});
+});
+router.get("/naruto1", isLoggedIn, (req, res, next) => {
+ 
+  res.render("naruto1", {user: req.session.user});
+});
+router.get("/a22b9s", isLoggedIn, (req, res, next) => {
+
+  res.render("a22b9s", {user: req.session.user});
+});
+router.get("/conan1", isLoggedIn, (req, res, next) => {
+  res.render("conan1", {user: req.session.user});
+});
+router.get("/kamado", isLoggedIn, (req, res, next) => {
+  res.render("kamado", {user: req.session.user});
+});
+router.get("/kaneki", isLoggedIn, (req, res, next) => {
+  res.render("kaneki", {user: req.session.user});
+});
+router.get("/luffy", isLoggedIn, (req, res, next) => {
+  res.render("luffy", {user: req.session.user});
+});
+router.get("/meliodas", isLoggedIn, (req, res, next) => {
+
+  res.render("meliodas", {user: req.session.user});
+});
+
 module.exports = router;

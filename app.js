@@ -34,7 +34,7 @@ app.use('/characters', charRoutes)
 //auth routes
 const authRouter = require('./routes/auth.routes')
 const { isLoggedOut } = require('./middleware/route-guard')
-app.use('/auth', isLoggedOut, authRouter)
+app.use('/auth', authRouter)
 
 //shop routes
 app.post('/add-item', (req, res) => {

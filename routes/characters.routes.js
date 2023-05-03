@@ -36,15 +36,15 @@ router.post("/create", isLoggedIn, async (req, res) => {
     if (req.body.universe === "Human" && req.body.gender === "Male") {
       charImg = "/images/charImages/HumanM4.png";
     } else if (req.body.universe === "Human" && req.body.gender === "Female") {
-      charImg = "/images/charImages/HumanF.png";
-    } else if (req.body.universe === "Saiyan" && req.body.gender === "Male") {
-      charImg = "../images/charImages/SaiyanM.jpg";
-    } else if (req.body.universe === "Saiyan" && req.body.gender === "Female") {
-      charImg = "/images/charImages/SaiyanF.png";
-    } else if (req.body.universe === "ShinobiM" && req.body.gender === "Male") {
+      charImg = "/images/charImages/humanF.png";
+    } else if (req.body.universe === "Sayian" && req.body.gender === "Male") {
+      charImg = "/images/charImages/SayianM.png";
+    } else if (req.body.universe === "Sayian" && req.body.gender === "Female") {
+      charImg = "/images/charImages/sayainF.png";
+    } else if (req.body.universe === "Shinobi" && req.body.gender === "Male") {
       charImg = "/images/charImages/ShinobiM.png";
     } else if (req.body.universe === "Shinobi" && req.body.gender === "Female") {
-      charImg = "/images/charImages/Shinobif.png";
+      charImg = "/images/charImages/ShinobiF.png";
     } else if (req.body.universe === "Demon" && req.body.gender === "Male") {
       charImg = "/images/charImages/DemonM.png";
     } else if (req.body.universe === "Demon" && req.body.gender === "Female") {
@@ -57,9 +57,9 @@ router.post("/create", isLoggedIn, async (req, res) => {
       charImg = "/images/charImages/AndroidM.png";
     } else if (req.body.universe === "Android" && req.body.gender === "Female") {
       charImg = "/images/charImages/androidF.jpg";
-    } else if (req.body.universe === "Alian" && req.body.gender === "Male") {
+    } else if (req.body.universe === "Alien" && req.body.gender === "Male") {
       charImg = "/images/charImages/alienM.png";
-    } else if (req.body.universe === "Alian" && req.body.gender === "Female") {
+    } else if (req.body.universe === "Alien" && req.body.gender === "Female") {
       charImg = "/images/charImages/alienF.png";
     }
       const charCreation = await Character.create({
@@ -131,6 +131,8 @@ router.get("/:id/delete", isLoggedIn, async (req, res) => {
         console.log(error);
     }
   });
+
+
 
 
 module.exports = router; 

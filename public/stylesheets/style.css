@@ -1,3 +1,16 @@
+.titleText{
+color: white;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.8);
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -140,10 +153,100 @@ p {
 }
 /* home page css */
 .HomePage{
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   height: 400px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.startblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.card-img-top1 {
+  width: 200px;
+}
+
+.btn 
+{ display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #00000092;
+  color: #820000;
+  padding: 5px;
+}
+/*create character css*/
+.characterCreate {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.Create ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.createtext{
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.welcomeBtn{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #79686892;
+  color: #ba6060;
+  padding: 5px;
+}
+
+.createSelect {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.pageText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainlabel {
+  color: white;
+  margin-bottom: 10px;
+  
+}
+
+
+.maininput{
+  margin: 5px;
 }
 
 /*universe page css*/
@@ -163,9 +266,275 @@ p {
   color: white;
 }
 
+/* allcharacter view css*/
+.exploreBox1{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  height: 500px;
+  text-align: center;
+  color: white;
+}
+
+.allcharP {
+  margin: 4px;
+  font-size: 25px;
+}
+
 .locationImage{
   width: 400px;
 }
+
+.charimg {
+  width: 200px;
+}
+
+<<<<<<< HEAD
+.card-img-top {
+  width: 100px;
+}
+
+/* item page css*/
+.itemPage{
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 1000px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, 3fr);
+}
+
+.startblock1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.itemImg{
+width: 150px;
+}
+
+.item-text{
+  color: white;
+}
+
+.addBTN {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #79686892;
+  color: #ba6060;
+  padding: 5px;
+}
+=======
+
+.gamePage body {
+  background-color: darkblue;
+  color: yellow;
+ }
+ 
+ /* All elements width includes borders and padding*/
+ * {
+ box-sizing: border-box;
+ }
+ 
+ /* Rows*/
+ .row::after {
+ content: "";
+ clear: both;
+ display: table;
+ }
+ 
+ /* Classes containing "col-"*/
+ [class*="col-"] {
+ float: left;
+ padding: 15px;
+ }
+ 
+ /* Column width for small devices (i.e. smart phones)*/
+ [class*="col-"] {
+ width: 100%;
+ }
+ 
+ /* Column width for large devices (i.e. computers)*/
+ @media only screen and (min-width: 768px) {
+ .col-1 {width: 8.33%;}
+ .col-2 {width: 16.66%;}
+ .col-3 {width: 25%;}
+ .col-4 {width: 33.33%;}
+ .col-5 {width: 41.66%;}
+ .col-6 {width: 50%;}
+ .col-7 {width: 58.33%;}
+ .col-8 {width: 66.66%;}
+ .col-9 {width: 75%;}
+ .col-10 {width: 83.33%;}
+ .col-11 {width: 91.66%;}
+ .col-12 {width: 100%;}
+ }
+ 
+ /* Column width for large devices (i.e. tablets)*/
+ @media only screen and (min-width: 600px) {
+ .col-t-1 {width: 8.33%;}
+ .col-t-2 {width: 16.66%;}
+ .col-t-3 {width: 25%;}
+ .col-t-4 {width: 33.33%;}
+ .col-t-5 {width: 41.66%;}
+ .col-t-6 {width: 50%;}
+ .col-t-7 {width: 58.33%;}
+ .col-t-8 {width: 66.66%;}
+ .col-t-9 {width: 75%;}
+ .col-t-10 {width: 83.33%;}
+ .col-t-11 {width: 91.66%;}
+ .col-t-12 {width: 100%;}
+ }
+ 
+ /* Button */
+ .greenBut {
+ color: darkblue;
+ padding: 12px; /* Some padding */
+ background-color: yellow;
+ font-size: 24px;
+ border: 1px solid #ccc; /* Gray border */
+ border-radius: 6px; /* Rounded borders */
+ margin: 10px;
+ }
+ 
+ img {
+   max-width: 100%;
+   margin: 10px;
+ }
+ 
+ button:hover {
+   opacity: .5;
+ }
+ .about-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.about {
+  margin-left: 20px;
+  text-align: left;
+  margin-top: 0px;
+  padding-top: 0px
+}
+
+.about-image{
+  width: 60vw;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.about-image img {
+  width: 500px;
+}
+.profileBox {
+  margin-top: 50px;
+    margin-left: 250px;
+    border: 5px solid white;
+    background-color: rgba(58, 28, 6, 0.7);
+    width:70vw;
+  }
+
+  .exploreBox {
+    margin-top: 20px;
+    margin-left: 260px;
+    border: 5px solid white;
+    background-color: rgba(58, 36, 6, 0.7);
+    width:70vw;
+  }
+
+  .profileText{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .profilePage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .songokuImage {
+    width: 6000px;
+    margin-left: 10px;
+  }
+
+  .conanImage {
+    width: 1200px;
+    margin-left: 10px;
+  }
+
+  .kanekiImage {
+    width: 2200px;
+    margin-left: 10px;
+  }
+  .kamadoImage {
+    width: 350px;
+    margin-left: 10px;
+  }
+  .luffyImage {
+    width: 350px;
+    margin-left: 10px;
+  }
+  .meliodasImage {
+    width: 3550px;
+    margin-left: 10px;
+  }
+  .narutoImage {
+    width: 600px;
+    margin-left: 10px;
+  }
+  .dragonballImage {
+    width: 2300px;
+    margin-left: 10px;
+  }
+  .narutoImage {
+    width: 1300px;
+    margin-left: 10px;
+  }
+  .nierImage {
+    width: 700px;
+    margin-left: 10px;
+  }
+  .onepieceImage {
+    width: 550px;
+    margin-left: 10px;
+  }
+  .sdsImage {
+    width: 1350px;
+    margin-left: 10px;
+  }
+  .tokyogImage {
+    width: 1600px;
+    margin-left: 10px;
+  }
+  .button{
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(6, 58, 19);
+    background-color: white;
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+  }
+>>>>>>> main
+
 
 .charimg {
   width: 200px;

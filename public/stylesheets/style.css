@@ -152,7 +152,7 @@ p {
   text-align: center;
 }
 /* home page css */
-.HomePage{
+.homeepage{
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   height: 400px;
@@ -164,7 +164,7 @@ p {
   flex-direction: row;
 }
 
-.startblock {
+.mainpagediv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,8 +173,31 @@ p {
   text-align: center;
 }
 
+.mainpageimg {
+  width: 100px;
+  margin: 5px;
+}
+
+.mainpageimg1 {
+  width: 200px;
+  margin: 5px;
+}
+
 .card-img-top1 {
   width: 200px;
+}
+
+.btndelete{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #94252592;
+  color: #ffffff;
+  padding: 5px;
 }
 
 .btn 
@@ -186,13 +209,35 @@ p {
   cursor: pointer;
   border-radius: 10px;
   background-color: #00000092;
-  color: #820000;
+  color: #ff0000;
   padding: 5px;
+}
+
+.deletetitle{
+  margin-bottom: 150px;
+}
+
+.deletebtns{
+display: grid;
+grid-template-columns: repeat(5, 3fr);
+margin-left: 450px;
 }
 /*create character css*/
 .characterCreate {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
+}
+
+.detailbuttons {
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #00000092;
+  color: #ff0000;
+  padding: 5px;
 }
 
 .Create ul li{
@@ -284,15 +329,9 @@ text-align: center;
   width: 400px;
 }
 
-.charimg {
-  width: 200px;
+.allcharimg {
+  width: 155px;
 }
-
-
-.charimg {
-  width: 200px;
-}
-
 
 .gamePage body {
   background-color: darkblue;
@@ -495,3 +534,53 @@ text-align: center;
     width: 160px;
   }
   
+  .itemPage{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 1000px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 3fr);
+  }
+  
+  .startblock1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .itemImg{
+  width: 150px;
+  }
+  
+  .item-text{
+    color: white;
+  }
+  
+  .addBTN {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #79686892;
+    color: #ba6060;
+    padding: 5px;
+  }
+
+  /* item details page */
+  .itemdetailspage {
+    background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  text-align: center;
+  color: white;
+  }

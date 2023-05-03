@@ -1,17 +1,15 @@
 <h1 class="titleText">Character Details:</h1>
-<div class="exploreBox"> 
+<div class="exploreBox1"> 
 <h1 class="titleText"><%= findChar.name %> Details:</h2>  
-  <img class="charimg" src="<%= findChar.image %>" alt="character image">
+  <img class="mainpageimg1" src="<%= findChar.image %>" alt="character image">
   <p class="allcharP">Gender: <%= findChar.gender %></p> 
   <p class="allcharP">Nickname: <%= findChar.nickname %></p> 
   <p class="allcharP">Weakness: <%= findChar.weakness %></p>
 <p class="allcharP">Universe: <%= findChar.universe %></p>
 <p class="allcharP">Weapon: <%= findChar.weapon %></p>
   <a href="/characters/<%= findChar.id %>/update"
-    class="whiteButton">Change Your Character</a>  
-  <a href="/characters/<%= findChar.id %>/delete" class="whiteButton">Delete this character</a>
-
-  <a href="/application"> home</a>
+    class="detailbuttons">Update Character</a>  
+  <a href="/characters/<%= findChar.id %>/delete" class="detailbuttons">Delete character</a>
   </div>
 
   

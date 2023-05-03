@@ -1,20 +1,19 @@
-<div class="updateBackground">
-    <h1>Delete:</h1>
+<div class="exploreBox1">
+    <h1 class="deletetitle">Running Away?</h1>
    
       </form>
     <div class="pageCtr">
     <div class="box">
       <div class="pageText">
-        <h1 style="color: red">
-          Are you sure you want to delete <%= toDelete.name %>? This proccess is
-          irreversible!
+        <h1 style="color: rgb(247, 0, 0)">
+          Is this your Ninja Way <%= toDelete.name %>? Running Away from battles?
         </h1>
-        <a href="/characters/<%= toDelete.id %>/deleteValid" class="whiteButton"
-          >I'm sure!</a
-        >
-        <a href="/characters/<%= toDelete.id %>/details" class="whiteButton"
-          >Take me back!</a
-        >
+        <div class="deletebtns">
+        <a href="/characters/<%= toDelete.id %>/deleteValid" class="btndelete" 
+          >I'm sure! My Yamcha Way..</a>
+        <a href="/characters/<%= toDelete.id %>/details" class="btndelete" 
+          >I will be the createst!</a>
+        </div>
       </div>
     </div>
   </div>

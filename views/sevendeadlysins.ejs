@@ -1,9 +1,30 @@
-<form action="/auth/logout" method="post">
-  <button type="submit">Log out</button>
-</form>
+
 <div class="exploreBox">
-  <h1>Seven Deadly Sins</h>
+  <div class="exploreText">
+  <h1>Seven Deadly Sins</h1>
+  <div class="about-page">
+    <div class="image">
+      <img
+        src="/images/uniImages/sdsuni.jpg"
+        alt="Mount Doom"
+        class="sdsImage"
+      />
+      <button id="play">Play Music</button>
+      <script>
+        let play = document.getElementById("play");
+        function playMusic(){
+          let audio = new Audio("/audio/wegottapower.mp3");
+          audio.play()
+        }
+        play.addEventListener("click", playMusic);
+      </script>
+    </div>
+
+    <div class="about">
     <p>According to Roman Catholic theology, the seven deadly sins are the seven behaviours or feelings that inspire
       further sin.
       They are typically ordered as: pride, greed, lust, envy, gluttony, wrath, and sloth.</p>
+</div>
+</div>
+</div>
 </div>

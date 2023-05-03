@@ -1,9 +1,30 @@
-<form action="/auth/logout" method="post">
-  <button type="submit">Log out</button>
-</form>
+
 <div class="exploreBox">
-  <h1>Nier Automata</h>
+  <div class="exploreText"></div>
+  <h1>Nier Automata</h1>
+  <div class="about-page">
+    <div class="image">
+      <img
+        src="/images/uniImages/nieruni.jpg"
+        alt="Mount Doom"
+        class="nierImage"
+      />
+      <button id="play">Play Music</button>
+          <script>
+            let play = document.getElementById("play");
+            function playMusic(){
+              let audio = new Audio("/audio/wegottapower.mp3");
+              audio.play()
+            }
+            play.addEventListener("click", playMusic);
+          </script>
+    </div>
+
+    <div class="about">
     <p>The story is set in 11945 AD, and revolves around a proxy war between the human-made androids
     and an invading army of Machines from another world. Though they lack emotions and true names,
     each android has a distinct personality.</p>
+</div>
+</div>
+</div>
 </div>

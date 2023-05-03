@@ -677,3 +677,67 @@ width: 150px;
     width: 6000px;
     margin-left: 10px;
   }
+
+  .conanImage {
+    width: 1200px;
+    margin-left: 10px;
+  }
+
+  .kanekiImage {
+    width: 2200px;
+    margin-left: 10px;
+  }
+  .kamadoImage {
+    width: 350px;
+    margin-left: 10px;
+  }
+  .luffyImage {
+    width: 350px;
+    margin-left: 10px;
+  }
+  .meliodasImage {
+    width: 3550px;
+    margin-left: 10px;
+  }
+  .narutoImage {
+    width: 600px;
+    margin-left: 10px;
+  }
+  .dragonballImage {
+    width: 2300px;
+    margin-left: 10px;
+  }
+  .narutoImage {
+    width: 1300px;
+    margin-left: 10px;
+  }
+  .nierImage {
+    width: 700px;
+    margin-left: 10px;
+  }
+  .onepieceImage {
+    width: 550px;
+    margin-left: 10px;
+  }
+  .sdsImage {
+    width: 1350px;
+    margin-left: 10px;
+  }
+  .tokyogImage {
+    width: 1600px;
+    margin-left: 10px;
+  }
+  .button{
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(6, 58, 19);
+    background-color: white;
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+  }

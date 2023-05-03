@@ -288,7 +288,6 @@ text-align: center;
   width: 200px;
 }
 
-<<<<<<< HEAD
 .card-img-top {
   width: 100px;
 }
@@ -331,7 +330,7 @@ width: 150px;
   color: #ba6060;
   padding: 5px;
 }
-=======
+
 
 .gamePage body {
   background-color: darkblue;
@@ -533,7 +532,6 @@ width: 150px;
     align-items: center;
     width: 160px;
   }
->>>>>>> main
 
 
 .charimg {
@@ -707,7 +705,10 @@ width: 150px;
     width: 2300px;
     margin-left: 10px;
   }
-  
+  .narutoImage {
+    width: 1300px;
+    margin-left: 10px;
+  }
   .nierImage {
     width: 700px;
     margin-left: 10px;
@@ -738,4 +739,3 @@ width: 150px;
     align-items: center;
     width: 160px;
   }
-

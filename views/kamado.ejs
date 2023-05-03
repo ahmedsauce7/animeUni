@@ -1,0 +1,32 @@
+<form action="/auth/logout" method="post">
+    <button type="submit">Log out</button>
+  </form>
+  <div class="exploreBox">
+    <div class="exploreText">
+    <h1>Kamado</h1>
+    <div class="about-page">
+      <div class="image">
+        <img
+          src="/images/charviewImages/kamado.jpg"
+          alt="Mount Doom"
+          class="kamadoImage"
+        />
+        <button id="play">Play Music</button>
+        <script>
+          let play = document.getElementById("play");
+          function playMusic(){
+            let audio = new Audio("/audio/wegottapower.mp3");
+            audio.play()
+          }
+          play.addEventListener("click", playMusic);
+        </script>
+      </div>
+      <div class="about">
+      <p> The main protagonist of Demon Slayer, Tanjiro Kamado is the oldest son of a late charcoal-seller, Tanjuro. 
+        In the first chapter of the manga, his family is massacred by a demon named Muzan Kibutsuji, 
+        with only his sister Nezuko Kamado surviving only to become a demon.</p>
+      </div>
+    </div>
+    </div>
+    </div>
+    

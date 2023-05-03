@@ -1,0 +1,35 @@
+<form action="/auth/logout" method="post">
+    <button type="submit">Log out</button>
+  </form>
+  <div class="exploreBox">
+    <div class="exploreText">
+    <h1>Meliodas</h1>
+    <div class="about-page">
+      <div class="image">
+        <img
+          src="/images/charviewImages/meliodas.jpg"
+          alt="Mount Doom"
+          class="meliodasImage"
+        />
+        <button id="play">Play Music</button>
+        <script>
+          let play = document.getElementById("play");
+          function playMusic(){
+            let audio = new Audio("/audio/wegottapower.mp3");
+            audio.play()
+          }
+          play.addEventListener("click", playMusic);
+        </script>
+      </div>
+  
+      <div class="about">
+      <p>Meliodas「メリオダス」 is the Dragon's Sin of Wrath「憤怒の罪ドラゴンシン, Doragon Shin」 and captain of the Seven Deadly Sins, 
+        the husband and lover of Elizabeth Liones and her previous incarnations, the owner of the renowned tavern Boar Hat, 
+        the current king of Kingdom of Liones, the father of Tristan, and the main protagonist of the series. 
+        His Sacred Treasure is the Demon Sword Lostvayne and his inherent power is Full Counter. He was also the head of the Ten Commandments, 
+        as Meliodas the Love「慈愛のメリオダス, Jiai no Meriodasu」, and a former member of Stigma after his defection from the Demon Clan.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  

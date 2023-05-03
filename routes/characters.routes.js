@@ -103,12 +103,11 @@ router.get("/:id/details",isLoggedIn,async (req,res, next)=> {
 
   router.post("/:id/update", isLoggedIn, async (req, res) => {
     try {
-      const updatedId = await Character.findByIdAndUpdate(req.params.id, {
+      await Character.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
         weapon: req.body.weapon,
         universe: req.body.universe,
-      }, {new:true});
-      console.log('id:', req.params.id);
+      });
       res.redirect(`/characters/${req.params.id}/details`);
     } catch (error) {
       console.log(error);

@@ -37,7 +37,7 @@ router.post('/universe', (req, res, next) => {
 router.post('/universe', (req, res, next) => {
   res.redirect('/nier')
 })
-router.post('/Universum/universe', (req, res, next) => {
+router.post('/universe', (req, res, next) => {
   res.redirect('/conan')
 })
 router.post('/universe', (req, res, next) => {
@@ -66,11 +66,17 @@ router.post('/application', (req, res, next) => {
   router.post('/application', (req, res, next) => {
     res.redirect('/universe')
   })
+  router.post('/application', (req, res, next) => {
+    res.redirect('/items')
+  })
 
 //Log Out
 router.post('/logout', (req, res, next) => {
   req.session.destroy(error => {
-    if (error) next(error)
+    if (error) { 
+      console.log(error);
+      next(error);
+    }
     res.redirect('/')
   })
 });

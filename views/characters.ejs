@@ -1,0 +1,19 @@
+<h1>Character Details:</h1>
+
+</form>
+<% currentChar.forEach(findChar => { %>
+ 
+<div class="exploreBox"> 
+<h1><%= findChar.name %> Details:</h2>  
+  <p>
+    <%= findChar.gender %> <%= findChar.nickname %> <%= findChar.weakness %>
+  </p>
+  <p>Universe: <%= findChar.universe %></p>
+  <p>Weapon: <%= findChar.weapon %></p>
+  <a href="/characters/<%= findChar.id %>/update"
+    class="whiteButton">Change Your Character</a>  
+  <a href="/characters/<%= findChar.id %>/delete" class="whiteButton">Delete this character</a>
+
+  <a href="/application"> home</a>
+  </div>
+  <% }) %>

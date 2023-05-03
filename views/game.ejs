@@ -1,4 +1,72 @@
 <h1>Game</h1>
+<div class="gamePage" >
 <form action="/auth/logout" method="post">
     <button type="submit">Log out</button>
   </form>
+  <html>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta charset="UTF-8">
+    <head>
+      <title>Dice Game</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <div class="row" align= "center">
+        <div class="col-4">
+     <h3>Son Goku</h3>
+    <img src="/images/diceImages/d1.png" alt="roll:1" id="mydice1"/>
+    <img src="/images/diceImages/d1.png" alt="roll:1" id="mydice2"/>
+        </div>
+        <div class= "col-4">
+          <h3>Vegeta</h3>
+          <img src="/images/diceImages/e1.png" alt="roll:1"id="hisdice1" />
+          <img src="/images/diceImages/e1.png" alt="roll:1"id="hisdice2"/>
+        </div>
+      <div class= "col-4">
+<img src = "/images/diceImages/good-luck.gif" id="message" alt="Good Luck!">
+<button class="greenBut" onclick="throwdice()" > Fight </button>
+    </div>
+      </div>
+      <script type="text/javascript">
+
+        let side_alt =["roll:1","roll:2","roll:3","roll:4","roll:5","roll:6"];
+
+        function throwdice(){
+          let rand1=Math.round(Math.random()*5) +1;
+          let rand2=Math.round(Math.random()*5) +1;
+          let rand3=Math.round(Math.random()*5) +1;
+          let rand4=Math.round(Math.random()*5) +1;
+
+          document.getElementById("mydice1").src="/images/diceImages/d" + rand1 + ".png";
+          document.getElementById("mydice2").src="/images/diceImages/d" + rand2 + ".png";
+          document.getElementById("hisdice1").src="/images/diceImages/e" + rand3 + ".png";
+          document.getElementById("hisdice2").src="/images/diceImages/e" + rand4 + ".png";
+        
+          document.getElementById('mydice1').alt=side_alt[rand1];
+          document.getElementById('mydice2').alt=side_alt[rand2];
+          document.getElementById('hisdice1').alt=side_alt[rand3];
+          document.getElementById('hisdice2').alt=side_alt[rand4];
+        
+          who_won(rand1,rand2,rand3,rand4);
+      }
+        function who_won (rand1,rand2,rand3,rand4){
+          let player_points = rand1+rand2;
+          let enemy_points= rand3+rand4;
+          let giffy = winner(player_points,enemy_points);
+          document.getElementById("message").src = giffy;
+          document.getElementById("message").alt = giffy;
+        }
+        function winner(player, enemy){
+          if (player<enemy){
+            return "/images/diceImages/looser2.gif";
+          } if(enemy<player){
+            return "/images/diceImages/winner3.gif";
+          }
+          if(player==enemy){
+            return "/images/diceImages/equal.gif";
+          }
+        }
+      </script>
+    </body>
+  </html>
+</div>

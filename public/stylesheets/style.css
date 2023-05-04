@@ -661,3 +661,73 @@ width:600px;
     height: 150px;
   }
 
+  /*navbar css*/
+  @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+  .navbarnav{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(149, 7, 7, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 25.5px;
+    list-style: none;
+  }
+
+  .navbarnav li{
+    font-family: 'Sigmar', cursive;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px;
+    transition: all 0.3 ease 0;
+  }
+
+  .navbarnav a{
+    font-family: 'Sigmar', cursive;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3 ease 0;
+  }
+
+  .navbarnav button{
+    font-family: 'Sigmar', cursive;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .logo{
+    cursor: pointer;
+  }
+
+  .nav_links li a:hover {
+    transition: all 0.3 ease 0;
+    color: rgb(255, 255, 255);
+  }
+
+  .navbarBtn {
+    padding: 9px 25px;
+    background-color: rgb(255, 206, 11);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0;
+  }
+
+  .navlogo{
+    width: 55px;
+    margin: 0;
+  }
+
+
+ 

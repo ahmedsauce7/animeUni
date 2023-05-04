@@ -333,6 +333,18 @@ text-align: center;
   width: 155px;
 }
 
+.gamePage{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 600px;
+  text-align: center;
+}
+
 .gamePage body {
   background-color: darkblue;
   color: yellow;
@@ -349,6 +361,10 @@ text-align: center;
  clear: both;
  display: table;
  }
+
+ #mydice1, #mydice2, #hisdice1, #hisdice2 {
+  display: none;
+}
  
  /* Classes containing "col-"*/
  [class*="col-"] {
@@ -394,14 +410,16 @@ text-align: center;
  }
  
  /* Button */
- .greenBut {
+ .fightBtn {
  color: darkblue;
- padding: 12px; /* Some padding */
+ padding: 12px;
  background-color: yellow;
  font-size: 24px;
- border: 1px solid #ccc; /* Gray border */
- border-radius: 6px; /* Rounded borders */
- margin: 10px;
+ border: 1px solid #ccc;
+ border-radius: 10px; 
+ width: 110px;
+ height: 50px;
+ cursor: pointer;
  }
  
  img {
@@ -435,11 +453,14 @@ text-align: center;
   width: 500px;
 }
 .profileBox {
-  margin-top: 50px;
-    margin-left: 250px;
+ margin: 0;
     border: 5px solid white;
     background-color: rgba(58, 28, 6, 0.7);
     width:70vw;
+    display: grid;
+    grid-template-columns: repeat(5, 3fr);
+
+
   }
 
   .exploreBox {
@@ -457,10 +478,8 @@ text-align: center;
   }
 
   .profilePage {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 3fr);
     padding-bottom: 20px;
     padding-top: 20px;
   }
@@ -531,7 +550,6 @@ text-align: center;
     display:flex; 
     flex-direction: column;
     align-items: center;
-    width: 160px;
   }
   
   .itemPage{
@@ -610,3 +628,36 @@ text-align: center;
   .itemImg3{
     width: 200px;
   }
+
+  /* Game page css*/
+  .goodLuckImg{
+width:600px;
+  }
+
+  /*character view css*/
+  .charview{
+  background-color: rgba(58, 36, 6, 0.7);
+  border: 5px solid white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  }
+
+  .charviewimg{
+    width: 100px;
+  }
+
+  .charviewimg2{
+    width: 130px;
+  }
+
+  .charviewimg3{
+    width: 150px;
+    height: 200px;
+  }
+
+  .charviewimg4{
+    width: 180px;
+    height: 150px;
+  }
+

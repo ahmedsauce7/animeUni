@@ -584,3 +584,29 @@ text-align: center;
   text-align: center;
   color: white;
   }
+
+  /* strongest fighters*/
+  .strongestchar{
+  background-color: rgba(0, 0, 0, 0.8);
+    height: 1000px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+  }
+
+  .startblock2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .itemImg2{
+    width: 100px;
+  }
+
+  .itemImg3{
+    width: 200px;
+  }

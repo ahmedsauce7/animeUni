@@ -58,6 +58,9 @@ router.post('/application', (req, res, next) => {
     res.redirect('/game')
   })
   router.post('/application', (req, res, next) => {
+    res.redirect('/strongest')
+  })
+  router.post('/application', (req, res, next) => {
     res.redirect('/infos')
   })
   router.post('/application', (req, res, next) => {

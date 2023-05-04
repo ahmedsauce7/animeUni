@@ -64,6 +64,14 @@ router.get("/sevendeadlysins", isLoggedIn, (req, res, next) => {
 
   res.render("sevendeadlysins", {user: req.session.user});
 });
+router.get("/ahmed", isLoggedIn, (req, res, next) => {
+  res.render("ahmed", {user: req.session.user});
+});
+
+router.get("/denis", isLoggedIn, (req, res, next) => {
+  res.render("denis", {user: req.session.user});
+});
+
 // Information
 router.get("/Info-A", isLoggedIn, (req, res, next) => {
 

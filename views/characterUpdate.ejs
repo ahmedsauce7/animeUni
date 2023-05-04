@@ -1,56 +1,54 @@
-<div class="exploreBox1">
-    <div class="pageCtr">
-    <div class="box">
-      <div class="pageText">
-        <h1>Change your Character:</h1>
-        <form action="/characters/<%= findChar._id %>/update" method="POST">
-          <ul class="wrapper">
-            <li class="form-row">
-              <label>Name:</label>
-              <input type="text" name="name" value="<%= findChar.name %>" />
-            </li>
-            <li class="form-row">
-              <label>Weapon of choice:</label>
-                <select name="weapon">
-                  <option value="KAMEHAMEHA">KAMEHAMEHA</option>
-                  <option value="SHARINGAN">SHARINGAN</option>
-                  <option value="FIRE BREATH STYLE">FIRE BREATH STYLE</option>
-                  <option value="BANKAI">BANKAI</option>
-                  <option value="ULTRA INSTINCT">ULTRA INSTINCT</option>
-                </select>
-            </li>
-            <li class="form-row">
-              <label>Universe:</label>
-                <select name="universe" required>
-                  <option value="Human">Human</option>
-                  <option value="Sayian">Sayian</option>
-                  <option value="Shinobi">Shinobi</option>
-                  <option value="Demon">Demon</option>
-                  <option value="Ghoul">Ghoul</option>
-                  <option value="Android">Android</option>
-                  <option value="Alien">Alian</option>
-                </select>
-            </li>
-            <li class="form-row">
-              <label>Gender:</label>
-              <select name="gender" required>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </li>
-            <li class="form-row">
-              <button type="submit">Apply Changes!</button>
-            </li>
-            <li class="form-row">
-              <a href="/characters/<%= findChar._id%>/details" class="detailbuttons"
-                >Cancel</a
-              >
-            </li>
-          </ul>
-        </form>
-      </div>
-    </div>
+<div class="characterCreate">
+  <div class="Create">
+      <h1 class="titleText">Change your Character:</h1>
+      <form action="/characters/<%= findChar._id %>/update" method="POST">
+        <div class="charupdatedetail">
+        <ul>
+          <li>
+            <label class="mainlabel">Name:</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Name"
+              value="<%= findChar.name %>"
+              class="maininput"
+            />
+          </li>
+          <li>
+            <label class="mainlabel">Weapon of choice:</label>
+            <select class="createSelect" name="weapon">
+              <option value="KAMEHAMEHA">KAMEHAMEHA</option>
+              <option value="SHARINGAN">SHARINGAN</option>
+              <option value="FIRE BREATH STYLE">FIRE BREATH STYLE</option>
+              <option value="BANKAI">BANKAI</option>
+              <option value="ULTRA INSTINCT">ULTRA INSTINCT</option>
+            </select>
+          </li>
+          <li>
+            <label class="mainlabel">Universe:</label>
+            <select class="createSelect" name="universe" required >
+              <option value="Human">Human</option>
+              <option value="Sayian">Sayian</option>
+              <option value="Shinobi">Shinobi</option>
+              <option value="Demon">Demon</option>
+              <option value="Ghoul">Ghoul</option>
+              <option value="Android">Android</option>
+              <option value="Alien">Alian</option>
+            </select>
+          </li>
+          <li>
+            <label class="mainlabel">Gender:</label>
+            <select class="createSelect" name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </li>
+          <div class="updateBtns">
+            <li><button type="submit" class="detailbuttons">Apply Changes!</button></li>
+            <li><a href="/characters/<%= findChar._id%>/details" class="detailbuttons">Cancel</a></li>
+            </div>
+        </ul>
+      </form>
     </div>
   </div>
-  
-  
+</div>

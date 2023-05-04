@@ -56,7 +56,7 @@ router.post("/create", isLoggedIn, async (req, res) => {
     } else if (req.body.universe === "Android" && req.body.gender === "Male") {
       charImg = "/images/charImages/AndroidM.png";
     } else if (req.body.universe === "Android" && req.body.gender === "Female") {
-      charImg = "/images/charImages/androidF.jpg";
+      charImg = "/images/charImages/androidF.png";
     } else if (req.body.universe === "Alien" && req.body.gender === "Male") {
       charImg = "/images/charImages/alienM.png";
     } else if (req.body.universe === "Alien" && req.body.gender === "Female") {

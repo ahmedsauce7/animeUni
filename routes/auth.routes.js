@@ -53,6 +53,14 @@ router.post('/universe', (req, res, next) => {
   res.redirect('/sevendeadlysins')
 })
 
+router.post('/characterview', (req, res, next) => {
+  res.redirect('/denis')
+})
+
+router.post('/characterview', (req, res, next) => {
+  res.redirect('/ahmed')
+})
+
 // Navigator
 router.post('/application', (req, res, next) => {
     res.redirect('/game')

@@ -1,23 +1,23 @@
 ## Project Title
-Football Goat Game
+Anime Universe
 <br>
 <hr>
 
 ## Project Description
-Football Goat is a game created using HTML, CSS, AND Javascript. The game contains a player that moves horizontally to keep the ball from touching the ground. The game ends when the ball touches the floor. After that, a score is calculated based on how many keep-ups the player got.
+Anime Unvierse is a Application created using HTML, CSS, AND Javascript. The App contains a MVP that can create, read, update and delete a character.
+It has Two Models with one relationship together. You can also play a fight game, apply items, and learn more about the universe and character from popular anime series.
 <br>
 <hr>
 
-## How to play
-Use the "Arrows", "A", or "D" to control the player. 
+## How to Login/Logout
+Use the "Sign Up" button. Write down your Name, E-Mail and Password. Keep the Name and the Password and Login.
 <br>
 <hr>
 
 ## MVP
-- The game has a ball that falls using gravity.
-- A player moving right and left.
-- Slightly increasing ball speed.
-- Score increases everytime the ball is kept of the floor.
+- Create and read a character.
+- Make changes und update different abilities.
+- Delete you character, if you don`t like him.
 <br>
 <hr>
 

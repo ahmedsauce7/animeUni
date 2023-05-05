@@ -21,20 +21,17 @@ It has Two Models with one relationship together. You can also play a fight game
 - design a MVP
 - select, adding items
 - ability to watch Character/Unviverse descriptions
+- fighting characters
 <br>
 <hr>
 
 
 ## Data Structure
-- startGame()
-- new Image ()
-- beginPath()
-- closePath()
-- ctx.arc()
-- ctx.fill
-- ctx.drawImage()
-- ctx.fillText()
-- animate()
-- .play()
+- router.get()
+- router.post()
+- cookies
+- session
+- authentication
+- app.use
 <br>
 <hr>

@@ -36,8 +36,8 @@ It has Two Models with one relationship together. You can also play a fight game
 <br>
 <hr>
 
-## Game link
-[Click here to play](https://animeuni.adaptable.app/)
+## App link
+[Click here to access](https://animeuni.adaptable.app/)
 <br>
 <hr>
 

@@ -9,11 +9,6 @@ It has Two Models with one relationship together. You can also play a fight game
 <br>
 <hr>
 
-## How to Login/Logout
-Use the "Sign Up" button. Write down your Name, E-Mail and Password. Keep the Name and the Password and Login.
-<br>
-<hr>
-
 ## MVP
 - Create and read a character.
 - Make changes und update different abilities.

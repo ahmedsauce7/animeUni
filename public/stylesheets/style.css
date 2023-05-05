@@ -752,3 +752,17 @@ width:600px;
   .charupdatedetail li{
     margin: 20px;
   }
+
+  /*play music button*/
+  #play {
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+  }

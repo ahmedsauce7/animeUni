@@ -22,10 +22,10 @@ Use the "Sign Up" button. Write down your Name, E-Mail and Password. Keep the Na
 <hr>
 
 ## Backlog
-- Scoreboard.
-- Ability to restart the game.
-- Ability to mute the audio.
-- Ability to pop up a picture of the GOAT.
+- ability to Login/Logout
+- design a MVP
+- select, adding items
+- ability to watch Character/Unviverse descriptions
 <br>
 <hr>
 

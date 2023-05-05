@@ -320,7 +320,6 @@ text-align: center;
 .exploreBox{
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  height: 500px;
   text-align: center;
   color: white;
 }
@@ -342,7 +341,7 @@ text-align: center;
 }
 
 .locationImage{
-  width: 400px;
+  width: 1500px;
 }
 
 .allcharimg {
@@ -506,7 +505,7 @@ text-align: center;
   }
 
   .conanImage {
-    width: 1200px;
+    width: 600px;
     margin-left: 10px;
   }
 
@@ -515,7 +514,7 @@ text-align: center;
     margin-left: 10px;
   }
   .kamadoImage {
-    width: 350px;
+    width: 700px;
     margin-left: 10px;
   }
   .luffyImage {
@@ -527,7 +526,7 @@ text-align: center;
     margin-left: 10px;
   }
   .narutoImage {
-    width: 600px;
+    width: 900px;
     margin-left: 10px;
   }
   .dragonballImage {
